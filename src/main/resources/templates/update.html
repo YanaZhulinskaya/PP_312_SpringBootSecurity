@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<form action="#" th:action="@{/admin/update}" th:object="${user}" method="POST">
+    <label> for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="username">UserName</label>
+    <input type="text" th:field="*{username}" id="username" placeholder="User_Name">
+    <br/>
+    <label for="lastname">LastName</label>
+    <input type="text" th:field="*{lastname}" id="lastname" placeholder="Last_Name">
+    <br/>
+    <label for="age">Age</label>
+    <input type="text" th:field="*{age}" id="age" placeholder="Age">
+    <br/>
+    <label for="password">Password</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="Password">
+    <br/>
+    <form>
+        <input type="submit" value="Update User"/>
+    </form>
+    <form th:action="@{'/admin'}">
+        <input type="submit" value="Back to User" List>
+    </form>
+
+</form>
+</body>
+</html>

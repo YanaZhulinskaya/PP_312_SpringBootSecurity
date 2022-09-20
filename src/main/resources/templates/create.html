@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<form action="#" th:action="@{/admin/create}" th:object="${user}" method="POST">
+    <label for="username">UserName</label>
+    <input type="text" th:field="*{username}" id="username" placeholder="Enter User User Name">
+    <br/>
+    <label for="lastname">LastName</label>
+    <input type="text" th:field="*{lastname}" id="lastname" placeholder="Enter User Last Name">
+    <br/>
+    <label for="age">Age</label>
+    <input type="text" th:field="*{age}" id="age" placeholder="Enter User Age">
+    <br/>
+    <label for="password">Password</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="Enter User Password">
+    <br/>
+    </label>
+    <form>
+    <input type="submit" value="Create User">
+    </form>
+</form>
+<hr>
+<form th:action="@{'/admin'}">
+    <input type="submit" value="Back to User" List>
+</form>
+<!--<a th:href="@{/admin}"> Back to User List</a>-->
+</body>
+</html>
